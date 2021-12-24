@@ -3,6 +3,8 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props)=>{
 
+  
+
     const notesinitial = [
         {
           "_id": "61c08b670fe88f1d087ce050",
@@ -56,7 +58,6 @@ const NoteState = (props)=>{
       // Add function
       const addNote = (title,description,tag)=>{
         // TODO : fetching all notes 
-
         const note = [    {
           "_id": "61c09145162cdb189214f7b5465462",
           "user": "61bebe3c8852ced235a41ca6564654",
@@ -69,16 +70,26 @@ const NoteState = (props)=>{
 
         setNotes(notes.concat(note));
       }
+
       // delete function
       const deleteNote = (id)=>{
+        // TODO : fetching all notes  
         const newNotes = notes.filter((note)=>{
           return note._id !==id
         })
         setNotes(newNotes)
       }
-      // // edit function
-      const editNote = ()=>{
 
+      // // edit function
+      const editNote = (id,title,description,tag)=>{
+        for (let index = 0; index < notes.length; index++) {
+          const element = notes[index];
+          if (element._id === id) {
+            element.title = title;
+            element.description = description;
+            element.tag = tag;
+          }
+        }
       }
 
 
