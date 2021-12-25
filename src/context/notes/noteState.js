@@ -64,6 +64,7 @@ const NoteState = (props) => {
         'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
       }
     })
+    // eslint-disable-next-line
     const json = await response.json()
 
     const newNotes = notes.filter((note) => {
@@ -83,7 +84,7 @@ const NoteState = (props) => {
         'Content-Type': 'application/json',
         'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
       },
-      body: JSON.stringify({title,description,tag}) 
+      body: JSON.stringify({title,description,tag,id}) 
     })
 
     const json = await response.json()

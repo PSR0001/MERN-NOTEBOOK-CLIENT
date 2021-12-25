@@ -5,7 +5,7 @@ import Noteitens from './Noteitens';
 
 export const Notes = () => {
     const context = useContext(noteContext)
-    const { notes, getAllNotes } = context;
+    const { notes, getAllNotes,editNote } = context;
     const [note, setNote] = useState({title : "", description: "", tag: "" })
 
     useEffect(() => {
@@ -20,6 +20,12 @@ export const Notes = () => {
     }
 
     // -----------------
+    const addNoteClickme = (e)=>{
+        console.log(note.title,note.description,note.tag,note.id);
+        editNote(note.title,note.description,note.tag)
+        e.preventDefault()
+       
+    }
     
     const onChange = (e)=>{
         setNote({...note, [e.target.name]: e.target.value})
@@ -61,7 +67,7 @@ export const Notes = () => {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
+                            <button type="button" className="btn btn-primary" onClick={addNoteClickme}>Save changes</button>
                         </div>
                     </div>
                 </div>
