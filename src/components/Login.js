@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
-
+import {useHistory} from 'react-router-dom'
 export const Login = () => {
+    const history = useHistory()
     const [loginInfo, setloginInfo] = useState({email: '', password: ''})
 
    const onChange = (e)=>{
@@ -22,6 +23,14 @@ export const Login = () => {
       
         const json = await response.json()
         console.log(json);
+        if (json.success){
+            // save it in local storage and redirect to home
+            localStorage.setItem('token',json.authToken)
+            history.push('/home')
+        }
+        else{
+            alert(json.error)
+        }
     }
    
     return (
