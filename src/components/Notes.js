@@ -14,6 +14,7 @@ export const Notes = () => {
     }, [])
 
     const ref = useRef(null)
+    const refClose = useRef(null)
     const updateNote = (currentNote) => {
         ref.current.click()
         setNote(currentNote)
@@ -21,10 +22,10 @@ export const Notes = () => {
 
     // -----------------
     const addNoteClickme = (e)=>{
-        console.log(note.title,note.description,note.tag,note.id);
-        editNote(note.title,note.description,note.tag)
+
+        editNote(note._id,note.title,note.description,note.tag)
         e.preventDefault()
-       
+        refClose.current.click()
     }
     
     const onChange = (e)=>{
@@ -66,7 +67,7 @@ export const Notes = () => {
                             {/* ------------- */}
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button"  ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-primary" onClick={addNoteClickme}>Save changes</button>
                         </div>
                     </div>
