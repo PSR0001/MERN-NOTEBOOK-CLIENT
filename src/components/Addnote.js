@@ -10,6 +10,7 @@ const Addnote = () => {
     const addNoteClickme = (e)=>{
         e.preventDefault()
         addNote(note.title,note.description,note.tag)
+        setNote({title : "", description: "", tag: "" })
     }
 
     const onChange = (e)=>{
@@ -22,17 +23,17 @@ const Addnote = () => {
         <form>
             <div className="mb-3">
                 <label htmlFor="title" className="form-label">TITLE</label>
-                <input type="text" className="form-control" name='title' onChange={onChange} id="title" />
+                <input type="text" value={note.title} minLength={4} className="form-control" name='title' onChange={onChange} id="title" />
             </div>
             <div className="mb-3">
                 <label htmlFor="description" className="form-label">Description</label>
-                <input type="text" onChange={onChange} name='description' className="form-control" id="description" />
+                <input type="text" value={note.description} minLength={5} onChange={onChange} name='description' className="form-control" id="description" />
             </div>
             <div className="mb-3">
                 <label htmlFor="tag" className="form-label">TAG</label>
-                <input type="text" onChange={onChange} name='tag' className="form-control" id="tag" />
+                <input type="text" value={note.tag} onChange={onChange} minLength={3} name='tag' className="form-control" id="tag" />
             </div>
-            <button type="submit" onClick={addNoteClickme} className="btn btn-primary">Add Note</button>
+            <button type="submit" disabled={note.title.length <=3||note.description.length <=4||note.tag.length <=2 } onClick={addNoteClickme} className="btn btn-primary">Add Note</button>
         </form>
     </div>
     )

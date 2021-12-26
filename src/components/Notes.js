@@ -51,15 +51,15 @@ export const Notes = () => {
                                 <form>
                                     <div className="mb-3">
                                         <label htmlFor="title" className="form-label">TITLE</label>
-                                        <input type="text" className="form-control" value={note.title} name='title' onChange={onChange} id="etitle" />
+                                        <input type="text" className="form-control" minLength={4} value={note.title} name='title'   onChange={onChange} id="etitle" />
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="description" className="form-label">Description</label>
-                                        <input type="text" value={note.description} onChange={onChange} name='description' className="form-control" id="edescription" />
+                                        <input type="text" value={note.description} minLength={5} onChange={onChange}  name='description' className="form-control" id="edescription" />
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="tag" className="form-label">TAG</label>
-                                        <input type="text" onChange={onChange} value={note.tag} name='tag' className="form-control" id="etag" />
+                                        <input type="text" minLength={3} onChange={onChange} value={note.tag} name='tag'  className="form-control" id="etag" />
                                     </div>
                                   
                                 </form>
@@ -68,7 +68,7 @@ export const Notes = () => {
                         </div>
                         <div className="modal-footer">
                             <button type="button"  ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" onClick={addNoteClickme}>Save changes</button>
+                            <button type="button" className="btn btn-primary" disabled={note.title.length <=3||note.description.length <=4||note.tag.length <=2 } onClick={addNoteClickme}>Save changes</button>
                         </div>
                     </div>
                 </div>
