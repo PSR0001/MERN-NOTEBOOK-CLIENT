@@ -8,7 +8,9 @@ import './App.css';
 import { About } from "./components/About";
 import Alert from "./components/Alert";
 import { Home } from "./components/Home";
+import { Login } from "./components/Login";
 import { Navbar } from "./components/Navbar";
+import { Signup } from "./components/Signup";
 import Notestate from "./context/notes/noteState";
 
 
@@ -26,6 +28,12 @@ function App() {
               </Route>
               <Route path="/about">
                 <About />
+              </Route>
+              <Route path="/login">
+                <Login/>
+              </Route>
+              <Route path="/signup">
+                <Signup/>
               </Route>
             </Switch>
           </div>
