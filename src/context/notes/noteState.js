@@ -15,7 +15,7 @@ const NoteState = (props) => {
       cache: 'no-cache',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
+        'auth-token': localStorage.getItem('token')
       }
     })
 
@@ -34,7 +34,7 @@ const NoteState = (props) => {
       cache: 'no-cache',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
+        'auth-token': localStorage.getItem('token')
       },
       body: JSON.stringify({title,description,tag}) 
     })
@@ -61,7 +61,7 @@ const NoteState = (props) => {
       cache: 'no-cache',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
+        'auth-token': localStorage.getItem('token')
       }
     })
     // eslint-disable-next-line
@@ -82,7 +82,7 @@ const NoteState = (props) => {
       cache: 'no-cache',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
+        'auth-token': localStorage.getItem('token')
       },
       body: JSON.stringify({title,description,tag,id}) 
     })
