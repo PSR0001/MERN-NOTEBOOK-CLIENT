@@ -15,8 +15,7 @@ export const Login = () => {
             mode: 'cors',
             cache: 'no-cache',
             headers: {
-              'Content-Type': 'application/json',
-              'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFiZWJlM2M4ODUyY2VkMjM1YTQxY2E2In0sImlhdCI6MTYzOTg5MDQ5Mn0.ZdaMHNUzCCyRwTH7gFJnq-KsOwj6jcN2lgA9MlAmVAc'
+              'Content-Type': localStorage.getItem('token')
             },
             body: JSON.stringify(loginInfo) 
         })
