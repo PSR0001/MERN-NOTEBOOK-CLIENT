@@ -76,6 +76,9 @@ export const Notes = () => {
 
             <div className='row my-3'>
                 <h2>Add a Note</h2>
+                <dix className="container">
+                    {notes.length === 0 && 'No notes to Display'}
+                </dix>
                 {notes.map((note) => {
                     return <Noteitens key={note._id} updateNote={updateNote} note={note} />
                 })}
