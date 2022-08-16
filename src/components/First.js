@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const First = () => {
 
@@ -23,7 +24,7 @@ const First = () => {
                         <h1>Take a note.</h1>
                         <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
                         <p className="lead">
-                            <p className="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</p>
+                            <Link className="btn btn-lg btn-secondary fw-bold border-white bg-white" to="/home">Take a Note</Link>
                         </p>
                     </section>
 

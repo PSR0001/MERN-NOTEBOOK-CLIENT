@@ -19,31 +19,31 @@ function App() {
   return (
     <>
       <Notestate>
-    <First />
-        <Router>
+    {/* <First />    */}
           
           {/* <Alert message = "this is amezing"  /> */}
-          <div className="First-height">
+          {/* <div className="First-height"> */}
+        <Router>
           <Navbar />
             <Switch >
-              {/* <Route path="/index">
+              <Route exact path="/">
               <First />
-              </Route> */}
-              <Route path="/home">
+              </Route>
+              <Route exact path="/home">
                 <Home />
               </Route>
-              <Route path="/about">
+              <Route exact path="/about">
                 <About />
               </Route>
-              <Route path="/login">
+              <Route exact path="/login">
                 <Login/>
               </Route>
-              <Route path="/signup">
+              <Route exact path="/signup">
                 <Signup/>
               </Route>
             </Switch>
-          </div>
         </Router>
+          {/* </div> */}
       </Notestate>
     </>
   );
