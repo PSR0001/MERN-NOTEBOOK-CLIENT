@@ -36,7 +36,7 @@ export const Signup = () => {
     return (
         <div className='container'>
             <div className="form-signin text-center card mt-5 shadow">
-                <form onsubmit={onSubmit}>
+                <form onSubmit={onSubmit}>
 
                     <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
 
