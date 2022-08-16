@@ -6,7 +6,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { About } from "./components/About";
-import Alert from "./components/Alert";
+// import Alert from "./components/Alert";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
 import { Navbar } from "./components/Navbar";
@@ -19,12 +19,16 @@ function App() {
   return (
     <>
       <Notestate>
+    <First />
         <Router>
-          <Navbar />
-          <First />
+          
           {/* <Alert message = "this is amezing"  /> */}
-          <div className="container">
+          <div className="First-height">
+          <Navbar />
             <Switch >
+              {/* <Route path="/index">
+              <First />
+              </Route> */}
               <Route path="/home">
                 <Home />
               </Route>

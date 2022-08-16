@@ -67,5 +67,11 @@
  * Base structure
  */
 
+ .bg-First{
+  background: url('./img/download.svg') ;
+ }
+.First-height{
+  height: 100vh;
+}
 
 
