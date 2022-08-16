@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory,Link } from 'react-router-dom'
+import { FaFacebookF,FaLinkedinIn,FaGithub } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 
 export const Signup = () => {
     const history = useHistory()
@@ -64,6 +66,22 @@ export const Signup = () => {
                     <button  className="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
                     <p className="mt-5 mb-3 text-muted">&copy; 2020–2022</p>
                 </form>
+                <div className="text-center">
+                    <p>Already a member? <Link to={'/login'} >Log in</Link></p>
+                    <p>or sign up with:</p>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FaFacebookF />
+                    </button>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FcGoogle />
+                    </button>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FaLinkedinIn />
+                    </button>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FaGithub />
+                    </button>
+                </div>
             </div>
         </div>
     )
