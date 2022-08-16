@@ -40,6 +40,32 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+/* about page */
 .card-width{
   width: 18rem;
 }
+
+
+
+/* index page */
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+
+

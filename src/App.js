@@ -12,6 +12,7 @@ import { Login } from "./components/Login";
 import { Navbar } from "./components/Navbar";
 import { Signup } from "./components/Signup";
 import Notestate from "./context/notes/noteState";
+import First from "./components/First";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       <Notestate>
         <Router>
           <Navbar />
-          <Alert message = "this is amezing"  />
+          <First />
+          {/* <Alert message = "this is amezing"  /> */}
           <div className="container">
             <Switch >
               <Route path="/home">
