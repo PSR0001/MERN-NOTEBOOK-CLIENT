@@ -1,105 +1,70 @@
-import React from 'react'
+import React from "react";
+// import One from "../img/1.jpg"
+// import Two from "../img/2.jpg"
+// import Three from "../img/3.jpg"
+
 // import noteContext from '../context/notes/noteState'
 
 export const About = () => {
-    // let a = useContext(noteContext)
+  // let a = useContext(noteContext)
+  let Note = [
+    {
+      title: "Card title",
+      subtitle: "Card subtitle",
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    },
+    {
+      title: "Card title",
+      subtitle: "Card subtitle",
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    },
+    {
+      title: "Card title",
+      subtitle: "Card subtitle",
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    },
+    {
+      title: "Card title",
+      subtitle: "Card subtitle",
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    },
+  ];
 
-    return (
-        <div>
-
-            <div className="container py-5">
-                <h1>Bootstrap and Masonry</h1>
-
-
-                <p>Masonry is not included in Bootstrap. Add it by including the JavaScript plugin manually, or using a CDN like so:</p>
-
-
-
-                <div className="row" data-masonry='{"percentPosition": true }'>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card">
-                            <svg className="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-
-                            <div className="card-body">
-                                <h5 className="card-title">Card title that wraps to a new line</h5>
-                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card p-3">
-                            <figure className="p-3 mb-0">
-                                <blockquote className="blockquote">
-                                    <p>A well-known quote, contained in a blockquote element.</p>
-                                </blockquote>
-                                <figcaption className="blockquote-footer mb-0 text-muted">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card">
-                            <svg className="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card bg-primary text-white text-center p-3">
-                            <figure className="mb-0">
-                                <blockquote className="blockquote">
-                                    <p>A well-known quote, contained in a blockquote element.</p>
-                                </blockquote>
-                                <figcaption className="blockquote-footer mb-0 text-white">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card text-center">
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This card has a regular title and short paragraph of text below it.</p>
-                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card">
-                            <svg className="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card p-3 text-end">
-                            <figure className="mb-0">
-                                <blockquote className="blockquote">
-                                    <p>A well-known quote, contained in a blockquote element.</p>
-                                </blockquote>
-                                <figcaption className="blockquote-footer mb-0 text-muted">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-lg-4 mb-4">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+  return (
+    <div>
+      <div className="container py-5">
+        <div className="text-center mx-5">
+          <p className="text-primary">save your imagination</p>
+          <h2>With Note-Book</h2>
+          <p className="mx-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+            illo! Voluptate quae impedit, fuga blanditiis in reprehenderit
+            adipisci culpa praesentium veniam eveniet eaque dolor, deserunt ipsa
+            possimus aliquam molestias natus voluptas nulla.
+          </p>
         </div>
-    )
-}
+        <div className=" mt-5 container row d-flex justify-content-between">
+          {Note.map((index, key) => {
+            return (
+              <div key={key} className="card card-width ">
+                <div className="card-body">
+                  <h5 className="card-title">{index.title}</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    {index.subtitle}
+                  </h6>
+                  <p className="card-text">{index.desc}</p>
+                  <span className="card-link">Card link &#8594;</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <hr className="mt-5" />
+        <div className="text-center">
+          <button className="btn btn-primary">More info</button>
+        </div>
+      </div>
+    </div>
+  );
+};
