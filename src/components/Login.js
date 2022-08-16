@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { Link,  useHistory } from 'react-router-dom'
+import { FaFacebookF,FaLinkedinIn,FaGithub } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+
+
+
+
 export const Login = () => {
     const history = useHistory()
     const [loginInfo, setloginInfo] = useState({ email: '', password: '' })
@@ -54,23 +60,27 @@ export const Login = () => {
                     <button className="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
                     <p className="mt-5 mb-3 text-muted">&copy; 2020–2022</p>
                 </form>
-                <div class="text-center">
-                    <p>Not a member? <a href="#!">Register</a></p>
+
+
+
+                <div className="text-center">
+                    <p>Not a member? <Link to={'/Signup'} >Register</Link></p>
                     <p>or sign up with:</p>
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-facebook-f"></i>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FaFacebookF />
                     </button>
 
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-google"></i>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FcGoogle />
                     </button>
 
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-twitter"></i>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        
+                        <FaLinkedinIn />
                     </button>
 
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-github"></i>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                        <FaGithub />
                     </button>
                 </div>
             </div>
