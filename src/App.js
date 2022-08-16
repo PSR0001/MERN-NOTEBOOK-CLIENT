@@ -3,7 +3,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { About } from "./components/About";
 import Alert from "./components/Alert";
